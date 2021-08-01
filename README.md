@@ -2,6 +2,46 @@
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 
+---
+
+## 解决 Prettier 和 ESLint 的冲突
+
+解决两者冲突问题，需要用到 **eslint-plugin-prettier** 和 **eslint-config-prettier**
+
+- eslint-plugin-prettier 将 Prettier 的规则设置到 ESLint 的规则中。
+- eslint-config-prettier 关闭 ESLint 中与 Prettier 中会发生冲突的规则。
+
+最后形成优先级：_Prettier 配置规则 > ESLint 配置规则_
+
+- 安装插件
+
+```js
+npm i eslint-plugin-prettier eslint-config-prettier -D
+```
+
+- 在 .eslintrc.js 添加 prettier 插件
+
+```json
+module.exports = {
+  ...
+  extends: [
+    'plugin:vue/essential',
+    'airbnb-base',
+    'plugin:prettier/recommended' // 添加 prettier 插件
+  ],
+  ...
+}
+```
+
+## 代码修复流程
+
+1、查看错误代码 npm run lint
+2、方法一：挨个文件修复
+3、方法二：yarn run lint --fix
+4、方法三：使用 lint-staged 插件配置 commit 时自动修复(_lint-staged —— 在 git 暂存的文件上运行 linters_)
+
+---
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
