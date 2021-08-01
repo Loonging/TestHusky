@@ -35,10 +35,10 @@ module.exports = {
 
 ## 代码修复流程
 
-1、查看错误代码 npm run lint
-2、方法一：挨个文件修复
-3、方法二：yarn run lint --fix
-4、方法三：使用 lint-staged 插件配置 commit 时自动修复(_lint-staged —— 在 git 暂存的文件上运行 linters_)
+- 查看错误代码 npm run lint
+- 方法一：挨个文件修复
+- 方法二：yarn run lint --fix
+- 方法三：使用 lint-staged 插件配置 commit 时自动修复(_lint-staged —— 在 git 暂存的文件上运行 linters_)
 
 ---
 
