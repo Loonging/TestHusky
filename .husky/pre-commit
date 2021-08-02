@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+git config http.proxy http://127.0.0.1:1087
+
 npx lint-staged
 

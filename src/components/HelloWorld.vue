@@ -1,6 +1,7 @@
 <template>
   <h1>{{ props.msg }}</h1>
   <h2>{{ number }}</h2>
+  <el-button type="primary">el-button</el-button>
 </template>
 
 <script setup lang="ts">

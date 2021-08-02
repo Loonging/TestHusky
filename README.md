@@ -38,9 +38,36 @@ module.exports = {
 - 查看错误代码 npm run lint
 - 方法一：挨个文件修复
 - 方法二：yarn run lint --fix
-- 方法三：使用 lint-staged 插件配置 commit 时自动修复(_lint-staged —— 在 git 暂存的文件上运行 linters_)
 
 ---
+
+## husky + lint-staged (commit 时自动修复)
+
+- 安装并自动配置 _husky_
+
+```js
+npx husky-init && npm install
+```
+
+lint-staged 这个工具一般结合 husky 来使用，它可以让 husky 的 hook 触发的命令只作用于 git add 那些文件（即 git 暂存区的文件），而不会影响到其他文件。
+
+- 安装 lint-staged
+
+```js
+npm i lint-staged -D
+```
+
+- 在 package.json 里增加 lint-staged 配置项
+
+```json
+"lint-staged": {
+  "*.{vue,js,ts}": "eslint --fix"
+},
+```
+
+这行命令表示：只对 git 暂存区的 .vue、.js、.ts 文件执行 eslint --fix。
+
+- 修改 .husky/pre-commit hook 的触发命令为：npx lint-staged
 
 ## Recommended IDE Setup
 
