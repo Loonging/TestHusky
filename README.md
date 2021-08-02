@@ -4,6 +4,16 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ---
 
+## 项目技术栈
+
+- 构建工具: [Vite 2.x](https://cn.vitejs.dev/)
+- 前端框架: [Vue 3.x](https://vue3js.cn/)
+- UI 框架: [element-plus](https://element-plus.gitee.io/#/zh-CN/component)
+- Git Hook 工具: [husky](https://typicode.github.io/husky/#/)+[lint-staged](https://github.com/okonet/lint-staged)
+- 代码规范: [editorconfig](https://editorconfig.org/)+[prettier](https://prettier.io/)+[eslint](https://eslint.org/)+[airbnb](https://github.com/lin-123/javascript)
+
+**_eslint 对于 Vue 进行代码规范相关规则配置：[点击跳转](https://eslint.vuejs.org/rules/)_**
+
 ## 解决 Prettier 和 ESLint 的冲突
 
 解决两者冲突问题，需要用到 **eslint-plugin-prettier** 和 **eslint-config-prettier**
